@@ -41,5 +41,5 @@ class Bootstrap {
 	}
 }
 
-require_once( __DIR__ . '/vendor/autoload.php' );
-new \Megane\Plugin\autoUpdatePlugin\Bootstrap();
+require_once( MEGANE9988_FROM_GITHUB_AUTO_PATH . '/vendor/autoload.php' );
+new Bootstrap();
