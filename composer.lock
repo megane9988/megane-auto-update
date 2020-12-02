@@ -1,0 +1,61 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "e0d4e4c0b8d6b9f7efe751ef1aa2bbb0",
+    "packages": [
+        {
+            "name": "inc2734/wp-github-theme-updater",
+            "version": "3.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/inc2734/wp-github-theme-updater.git",
+                "reference": "6224d6e820e33ef71a711a39fb8cd30587cd92f6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/inc2734/wp-github-theme-updater/zipball/6224d6e820e33ef71a711a39fb8cd30587cd92f6",
+                "reference": "6224d6e820e33ef71a711a39fb8cd30587cd92f6",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.6"
+            },
+            "require-dev": {
+                "dealerdirect/phpcodesniffer-composer-installer": "^0.4.3",
+                "phpcompatibility/phpcompatibility-wp": "*",
+                "phpunit/phpunit": "7.*",
+                "squizlabs/php_codesniffer": "*",
+                "wp-coding-standards/wpcs": "*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Inc2734\\WP_GitHub_Theme_Updater\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Takashi Kitajima",
+                    "email": "inc@2inc.org"
+                }
+            ],
+            "description": "A library for WordPress that automatic theme updater with GitHub API.",
+            "time": "2020-09-01T05:18:00+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": []
+}

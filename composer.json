@@ -1,0 +1,12 @@
+{
+    "name": "mgn_megane/megane-auto-update",
+    "authors": [
+        {
+            "name": "hajime OGUSHI",
+            "email": "info@m-g-n.me"
+        }
+    ],
+    "require": {
+        "inc2734/wp-github-theme-updater": "^3.1"
+    }
+}
