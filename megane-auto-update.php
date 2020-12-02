@@ -2,7 +2,7 @@
 /**
  * Plugin name: megane auto update plugin
  * Description: このプラグインは自動的にアップデートされることだけを目的にしたプラグインです。
- * Version: 0.1.2
+ * Version: 0.2.3
  *
  * @package megane
  * @author megane9988
@@ -19,11 +19,11 @@ define( 'MEGANE9988_FROM_GITHUB_AUTO_PATH', untrailingslashit( plugin_dir_path( 
 class Bootstrap {
 
 	public function __construct() {
-		add_action( 'plugins_loaded', array( $this, '_plugins_loaded' ) );
+		add_action( 'plugins_loaded', [ $this, '_plugins_loaded' ] );
 	}
 
 	public function _plugins_loaded() {
-		add_action( 'init', array( $this, '_activate_autoupdate' ) );
+		add_action( 'init', [ $this, '_activate_autoupdate' ] );
 	}
 
 	/**
@@ -36,7 +36,9 @@ class Bootstrap {
 			plugin_basename( __FILE__ ),
 			'megane9988',
 			'updatefromgithubplugin',
-			[ 'homepage' => 'https://megane-blog.com', ]
+			[
+				'homepage' => 'ttps://megane-blog.com',
+			]
 		);
 	}
 }
