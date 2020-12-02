@@ -9,7 +9,8 @@
  * @license GPL-2.0+
  */
 
-require_once 'vendor/autoload.php';
+namespace Megane\Plugin\autoUpdatePlugin;
+
 use Inc2734\WP_GitHub_Plugin_Updater\Bootstrap as Updater;
 
 define( 'MEGANE9988_FROM_GITHUB_AUTO_URL', untrailingslashit( plugin_dir_url( __FILE__ ) ) );
@@ -39,3 +40,6 @@ class Bootstrap {
 		);
 	}
 }
+
+require_once( __DIR__ . '/vendor/autoload.php' );
+new \Megane\Plugin\autoUpdatePlugin\Bootstrap();
