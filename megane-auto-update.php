@@ -11,8 +11,8 @@
 
 require_once "vendor/autoload.php";
 
-$updater = new Inc2734\WP_GitHub_Theme_Updater\Bootstrap(
-	get_template(),
+$updater = new Inc2734\WP_GitHub_Plugin_Updater\Bootstrap(
+	plugin_basename( __FILE__ ),
 	'megane9988',
-	'https://github.com/megane9988/updatefromgithubplugin'
+	'updatefromgithubplugin'
 );
