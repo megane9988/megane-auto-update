@@ -2,7 +2,7 @@
 /**
  * Plugin name: megane auto update plugin
  * Description: このプラグインは自動的にアップデートされることだけを目的にしたプラグインです。
- * Version: 0.0.2
+ * Version: 0.0.3
  *
  * @package megane
  * @author megane9988
