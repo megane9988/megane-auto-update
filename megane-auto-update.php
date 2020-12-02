@@ -35,10 +35,7 @@ class Bootstrap {
 		new Updater(
 			plugin_basename( __FILE__ ),
 			'megane9988',
-			'updatefromgithubplugin',
-			[
-				'homepage' => 'ttps://megane-blog.com',
-			]
+			'megane-auto-update'
 		);
 	}
 }
