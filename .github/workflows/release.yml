@@ -16,7 +16,7 @@ jobs:
       uses: actions/checkout@v2
 
     - name: Zip Release
-        uses: TheDoctor0/zip-release@0.4.1
+      uses: TheDoctor0/zip-release@0.4.1
       with:
         filename: 'megane-auto-update.zip'
         exclusions: '*.git* /*node_modules/* .editorconfig'
