@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin name: megane auto update plugin
- * Description: このプラグインは自動的にアップデートされることだけを目的にしたプラグインです。
+ * Description: This plugin is a plugin with the sole purpose of being automatically updated.
  * Version: 0.3.4
  *
  * @package megane
@@ -23,6 +23,7 @@ class Bootstrap {
 	}
 
 	public function _plugins_loaded() {
+		load_plugin_textdomain( 'megane-auto-update', false, basename( __DIR__ ) . '/languages' );
 		add_action( 'init', [ $this, '_activate_autoupdate' ] );
 	}
 
