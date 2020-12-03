@@ -13,9 +13,10 @@ jobs:
     name: Upload Release Asset
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout code
       - uses: actions/checkout@v2
-      - uses: vimtor/action-zip@v1
       - name: Easy Zip Files
+      - uses: vimtor/action-zip@v1
         with:
           files: /
           dest: megane-auto-update.zip
