@@ -2,7 +2,7 @@
 /**
  * Plugin name: megane auto update plugin
  * Description: This plugin is a plugin with the sole purpose of being automatically updated.
- * Version: 0.4.7
+ * Version: 0.4.8
  * Requires at least: 5.5
  * Requires PHP: 7.4
  * Requires Snow Monkey: 11.1.0
