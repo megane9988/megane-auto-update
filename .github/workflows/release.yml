@@ -7,7 +7,6 @@ on:
 name: Upload Release Asset
 
 jobs:
-  zip-files:
   runs-on: ubuntu-latest
   build:
     name: Upload Release Asset
