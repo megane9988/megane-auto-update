@@ -14,4 +14,3 @@ jobs:
       uses: TheDoctor0/zip-release@0.4.1
       with:
         filename: 'megane-auto-update.zip'
-        exclusions: '*.git* /*node_modules/* .editorconfig'
