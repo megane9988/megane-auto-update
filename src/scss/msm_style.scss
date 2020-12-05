@@ -1,0 +1,41 @@
+@charset "UTF-8";
+
+// ==========================================================================
+// Foundation
+// ==========================================================================
+//variable
+@import 'foundation/variable';
+
+// Mixins
+@import 'foundation/mixin/fontsize';
+@import 'foundation/mixin/mediaqueries';
+
+
+// ==========================================================================
+// override
+// ==========================================================================
+
+// Snow Monkey Theme
+// ------------------------------------
+// @import 'override/snow-monkey/header';
+// @import 'override/snow-monkey/global-nav';
+// @import 'override/snow-monkey/drawer';
+// @import 'override/snow-monkey/drawer-sub-nav';
+// @import 'override/snow-monkey/footer';
+
+// Snow Monkey Blocks
+// ------------------------------------
+@import 'override/snow-monkey-blocks/section-with-bgimage'; //セクション（背景画像あり）
+
+
+
+
+
+// ==========================================================================
+// Original
+// ==========================================================================
+
+// @import 'original/entry';
+// @import 'original/home';
+// @import 'original/session';
+// @import 'original/ondemand';

@@ -1,0 +1,38 @@
+// ==========================================================================
+// コア - カバーブロックの追加スタイル
+// ==========================================================================
+.smb-section-with-bgimage{
+	&.is-style-hero-img1-pc,
+	&.is-style-hero-img1-sm{
+		position: relative;
+		margin-top: 0;
+		padding: 0;
+		&::before{
+			content:"";
+			display: block;
+		}
+		.smb-section__title{
+			&::after{
+				display: none;
+			}
+		}
+	}
+	//Hero画像 - PC
+	&.is-style-hero-img1-pc{
+		&::before{
+			padding-top: 62.5%;
+		}
+		.smb-section__title{
+			img{
+				max-width: 40%;
+			}
+		}
+	}
+	//Hero画像 - SP
+	&.is-style-hero-img1-sm{
+		&::before{
+			padding-top: 100vh;
+		}
+		
+	}
+}

@@ -1,0 +1,67 @@
+// ==========================================================================
+// Snow Monkey テーマのヘッダの上書き
+// ==========================================================================
+
+@media (min-width: 64em){
+	@media all and (-ms-high-contrast: none){
+		.l-container{
+			padding-top: 56px;
+		}
+		.l-header--sticky-lg {
+			position: fixed;
+			top: 0;
+			width: 100%;
+		}
+	}
+}
+
+//ロゴ
+.l-1row-header__branding{
+	padding-top: 0;
+	padding-bottom: 0;
+	.custom-logo, .wpaw-site-branding__logo .custom-logo {
+		@include mq(lg){
+			height: auto;
+			width: 200px;
+		}
+	}
+}
+.l-1row-header .c-row__col:first-child{
+	@include mq(lg, max, true){
+		padding-left: 0;
+	}
+}
+
+//参加登録ボタン
+.p-header_entry_btn{
+	display: inline-block;
+	margin-right: 1.25em;
+	
+	background: rgb(7,86,150);
+	background: -webkit-linear-gradient(135deg, rgba(7,86,150,1) 0%,rgba(113,58,124,1) 100%);
+	background: linear-gradient(135deg,  rgba(7,86,150,1) 0%,rgba(113,58,124,1) 100%);
+	
+	text-decoration: none;
+
+	font-weight: bold;
+	line-height: 1;
+	color: #fff;
+	@include mq(lg, max, true){
+		padding: 0.85em 1em;
+		border-radius: 3px;
+		font-size: 0.75em;
+	}
+	@include mq(lg){
+		padding: 0.7em 1em;
+		border-radius: 5px;
+		font-size: 0.85rem;
+	}
+}
+
+//SNS
+.p-header_sns{
+	font-size: 1.125em;
+	& + &{
+		margin-left: 0.5rem;
+	}
+}
