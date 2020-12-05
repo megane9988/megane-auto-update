@@ -10,15 +10,26 @@ jobs:
     name: Upload Release Asset
     runs-on: ubuntu-latest
 
+    strategy:
+      matrix:
+        node-version: [13.x]
+
     steps:
     - name: Checkout code
       uses: actions/checkout@v2
+
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v1
+      with:
+        node-version: ${{ matrix.node-version }}
+    - run: yarn
+    - run: yarn css
 
     - name: Zip Release # release用のzip作成 https://github.com/marketplace/actions/zip-release
       uses: TheDoctor0/zip-release@0.4.1
       with:
         filename: 'megane-auto-update.zip' # ファイル名
-        exclusions: '*.git* /*node_modules/* .editorconfig' # 除外設定
+        exclusions: '*.git* /*node_modules/* .editorconfig /*src/*scss/*' # 除外設定
         directory: '.'
         path: '.'
         type: 'zip'
