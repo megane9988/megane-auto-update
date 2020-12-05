@@ -10,22 +10,25 @@ jobs:
     name: Upload Release Asset
     runs-on: ubuntu-latest
 
+#nodeのバージョン設定 参考 https://docs.github.com/ja/free-pro-team@latest/actions/guides/building-and-testing-nodejs
     strategy:
       matrix:
-        node-version: [13.x] #nodeのバージョン設定 参考 https://docs.github.com/ja/free-pro-team@latest/actions/guides/building-and-testing-nodejs
+        node-version: [13.x] 
 
+#yarnでのscriptの実施
     steps:
     - name: Checkout code
       uses: actions/checkout@v2
 
-    - name: Use Node.js ${{ matrix.node-version }} #yarnでのscriptの実施
+    - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
     - run: yarn
     - run: yarn css
 
-    - name: Zip Release # release用のzip作成 https://github.com/marketplace/actions/zip-release
+# release用のzip作成 https://github.com/marketplace/actions/zip-release
+    - name: Zip Release 
       uses: TheDoctor0/zip-release@0.4.1
       with:
         filename: 'megane-auto-update.zip' # ファイル名
@@ -34,7 +37,8 @@ jobs:
         path: '.'
         type: 'zip'
 
-    - name: Create Release # releaseを作成
+# releaseを作成
+    - name: Create Release
       id: create_release
       uses: actions/create-release@v1
       env:
@@ -45,7 +49,8 @@ jobs:
         draft: false
         prerelease: false
 
-    - name: Upload Release Asset # releaseにzipファイルを添付
+# releaseにzipファイルを添付
+    - name: Upload Release Asset
       id: upload-release-asset 
       uses: actions/upload-release-asset@v1
       env:
