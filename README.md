@@ -9,3 +9,7 @@
 $ yarn
 $ yarn css-build
 ```
+
+## 最新版のリリースzip
+
+- https://github.com/megane9988/megane-auto-update/releases/latest/download/megane-auto-update.zip
