@@ -12,6 +12,7 @@
  * @license GPL-2.0+
  */
 
+
 namespace Megane\Plugin\autoUpdatePlugin;
 
 use Inc2734\WP_GitHub_Plugin_Updater\Bootstrap as Updater;
@@ -19,15 +20,18 @@ use Inc2734\WP_GitHub_Plugin_Updater\Bootstrap as Updater;
 define( 'MEGANE9988_FROM_GITHUB_AUTO_URL', untrailingslashit( plugin_dir_url( __FILE__ ) ) );
 define( 'MEGANE9988_FROM_GITHUB_AUTO_PATH', untrailingslashit( plugin_dir_path( __FILE__ ) ) );
 
+
+require_once MEGANE9988_FROM_GITHUB_AUTO_PATH . '/inc/customizer.php';
+
 class Bootstrap {
 
 	public function __construct() {
-		add_action( 'plugins_loaded', [ $this, '_plugins_loaded' ] );
+		add_action( 'plugins_loaded', array( $this, '_plugins_loaded' ) );
 	}
 
 	public function _plugins_loaded() {
 		load_plugin_textdomain( 'megane-auto-update', false, basename( __DIR__ ) . '/languages' );
-		add_action( 'init', [ $this, '_activate_autoupdate' ] );
+		add_action( 'init', array( $this, '_activate_autoupdate' ) );
 
 		$theme = wp_get_theme( get_template() );
 		if ( 'snow-monkey' !== $theme->template && 'snow-monkey/resources' !== $theme->template ) {
@@ -48,9 +52,9 @@ class Bootstrap {
 
 		$data = get_file_data(
 			__FILE__,
-			[
+			array(
 				'RequiresSnowMonkey' => 'Requires Snow Monkey',
-			]
+			)
 		);
 
 		if (
@@ -99,5 +103,5 @@ class Bootstrap {
 	}
 }
 
-require_once( MEGANE9988_FROM_GITHUB_AUTO_PATH . '/vendor/autoload.php' );
+require_once MEGANE9988_FROM_GITHUB_AUTO_PATH . '/vendor/autoload.php';
 new Bootstrap();
