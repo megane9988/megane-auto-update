@@ -17,6 +17,7 @@ namespace Megane\Plugin\autoUpdatePlugin;
 
 use Inc2734\WP_GitHub_Plugin_Updater\Bootstrap as Updater;
 
+// パスを定数化
 define( 'MEGANE9988_FROM_GITHUB_AUTO_URL', untrailingslashit( plugin_dir_url( __FILE__ ) ) );
 define( 'MEGANE9988_FROM_GITHUB_AUTO_PATH', untrailingslashit( plugin_dir_path( __FILE__ ) ) );
 
@@ -24,15 +25,19 @@ define( 'MEGANE9988_FROM_GITHUB_AUTO_PATH', untrailingslashit( plugin_dir_path( 
 require_once MEGANE9988_FROM_GITHUB_AUTO_PATH . '/inc/customizer.php';
 
 class Bootstrap {
-
+　　　　　//必ず実施する項目として_plugins_loadedを実施
 	public function __construct() {
 		add_action( 'plugins_loaded', array( $this, '_plugins_loaded' ) );
 	}
-
+	// 実施する項目
 	public function _plugins_loaded() {
+		//翻訳ファイルの読み込み
 		load_plugin_textdomain( 'megane-auto-update', false, basename( __DIR__ ) . '/languages' );
+		
+		//アップデート通知機能の読み込みによる、アップデートの有無の確認
 		add_action( 'init', array( $this, '_activate_autoupdate' ) );
-
+		
+		//Snow Monkey テーマが有効化されてない場合に、アラートを出す
 		$theme = wp_get_theme( get_template() );
 		if ( 'snow-monkey' !== $theme->template && 'snow-monkey/resources' !== $theme->template ) {
 			add_action(
@@ -90,7 +95,7 @@ class Bootstrap {
 	}
 
 	/**
-	 * Activate auto update using GitHub
+	 * Activate auto update using GitHub 自動アップデートの参照先の設定
 	 *
 	 * @return void
 	 */
@@ -103,5 +108,8 @@ class Bootstrap {
 	}
 }
 
+//コンポーザーの読み込み
 require_once MEGANE9988_FROM_GITHUB_AUTO_PATH . '/vendor/autoload.php';
+
+//このファイルに定義されているプログラムの実行
 new Bootstrap();
