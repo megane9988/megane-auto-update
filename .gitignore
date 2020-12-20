@@ -3,3 +3,7 @@ node_modules/
 
 # Compile CSS
 css/
+
+
+# Composer
+/vendor/
