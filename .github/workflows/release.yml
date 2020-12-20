@@ -27,6 +27,12 @@ jobs:
     - run: yarn
     - run: yarn css
 
+#composerの実施
+    - name: Composer install
+      uses: docker://composer:1.9.1
+      with:
+        args: install
+
 # release用のzip作成 https://github.com/marketplace/actions/zip-release
     - name: Zip Release 
       uses: TheDoctor0/zip-release@0.4.1
