@@ -1,0 +1,21 @@
+@charset 'utf-8';
+
+@import '../../../../src/css/block-styles';
+
+.is-style-RJE-overlap-center:not(:root){
+	.smb-section{
+		margin: -100px auto 0;
+		width:92%;
+		z-index:1;
+	}
+}
+
+.editor-styles-wrapper .block-editor-block-list__layout{
+	.is-style-RJE-overlap-center:not(:root){
+		.smb-section{
+			margin: -100px auto 0;
+			width:92%;
+			z-index:1;
+		}
+	}
+}

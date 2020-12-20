@@ -1,0 +1,15 @@
+@charset 'utf-8';
+
+@import '../../../../src/css/block-styles';
+
+.is-style-RJE-section-side-1{
+	padding: 80px 0;
+	.c-container{
+		padding: 0 86px;
+		.smb-section__title{
+			&::after{
+				content: none;
+			}
+		}
+	}
+}

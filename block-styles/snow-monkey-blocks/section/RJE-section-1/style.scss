@@ -1,0 +1,44 @@
+@charset 'utf-8';
+
+@import '../../../../src/css/block-styles';
+
+.is-style-RJE-section-1{
+	padding: 48px 0;
+	.c-container{
+		padding: 0 86px;
+		font-feature-settings: "palt";
+		.smb-section__title{
+			text-align: left;
+			line-height: 1.6;
+			font-size: 40px;
+			&::after{
+				content: none;
+			}
+		}
+		.smb-section__body{
+			margin-top: 40px;
+			line-height: 1.8;
+		}
+	}
+}
+.is-style-RJE-overlap-center{
+	.is-style-RJE-section-1{
+		.c-container{
+			.smb-section__title{
+				text-align: center;
+				&::after{
+					content: "";
+					width: 120px;
+					margin-top: 40px;
+					background-color: #CFCFCF;
+				}
+			}
+			.smb-section__body{
+				margin: 40px auto 0;
+				.wp-block-columns{
+					justify-content: center;
+				}
+			}
+		}
+	}
+}
