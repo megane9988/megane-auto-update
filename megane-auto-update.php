@@ -2,7 +2,7 @@
 /**
  * Plugin name: megane auto update plugin
  * Description: This plugin is a plugin with the sole purpose of being automatically updated.
- * Version: 1.0.1
+ * Version: 1.0.2
  * Requires at least: 5.5
  * Requires PHP: 7.4
  * Requires Snow Monkey: 11.1.0
@@ -111,13 +111,13 @@ class Bootstrap {
 
 
 //Snow Monkey テーマが有効かの判別と、有効でない場合の処理
-require_once MEGANE9988_FROM_GITHUB_AUTO_PATH . 'inc/is-snow-monkey-theme.php';
+require_once MEGANE9988_FROM_GITHUB_AUTO_PATH . '/inc/is-snow-monkey-theme.php';
 
 //Snow Monkey Blocks プラグインが有効かの判別と、有効でない場合の処理
-require_once MEGANE9988_FROM_GITHUB_AUTO_PATH . 'inc/is-snow-monkey-blocks-plugin.php';
+require_once MEGANE9988_FROM_GITHUB_AUTO_PATH . '/inc/is-snow-monkey-blocks-plugin.php';
 
 //ブロックスタイル及びブロックパターンの設定の読み込み
-require_once MEGANE9988_FROM_GITHUB_AUTO_PATH . 'inc/load-register-block.php';
+require_once MEGANE9988_FROM_GITHUB_AUTO_PATH . '/inc/load-register-block.php';
 
 //コンポーザーの読み込み
 require_once MEGANE9988_FROM_GITHUB_AUTO_PATH . '/vendor/autoload.php';
