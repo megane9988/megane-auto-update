@@ -2,7 +2,7 @@
 /**
  * Plugin name: megane auto update plugin
  * Description: This plugin is a plugin with the sole purpose of being automatically updated.
- * Version: 0.6.1
+ * Version: 0.6.2
  * Requires at least: 5.5
  * Requires PHP: 7.4
  * Requires Snow Monkey: 11.1.0
@@ -25,7 +25,7 @@ define( 'MEGANE9988_FROM_GITHUB_AUTO_PATH', untrailingslashit( plugin_dir_path( 
 require_once MEGANE9988_FROM_GITHUB_AUTO_PATH . '/inc/customizer.php';
 
 class Bootstrap {
-　　　　　//必ず実施する項目として_plugins_loadedを実施
+//必ず実施する項目として_plugins_loadedを実施
 	public function __construct() {
 		add_action( 'plugins_loaded', array( $this, '_plugins_loaded' ) );
 	}
